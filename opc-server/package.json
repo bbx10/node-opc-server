@@ -1,0 +1,14 @@
+{
+  "name": "opc-server",
+  "version": "1.0.0",
+  "description": "Open Pixel Control server for Raspberry Pi ws281x LEDs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "bbx10node@gmail.com",
+  "license": "MIT",
+  "dependencies": {
+    "rpi-ws281x-native": "^0.4.0"
+  }
+}

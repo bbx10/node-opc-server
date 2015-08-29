@@ -26,8 +26,8 @@ This is not a Fadecandy controller hardware clone.
 
 ```
 npm install node-opc-server
-cd opc-server
-npm install rpi-ws281x-native
+cd node_modules/node-opc-server/opc-server
+npm install
 sudo node index.js
 ```
 
