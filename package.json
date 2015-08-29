@@ -1,6 +1,6 @@
 {
   "name": "node-opc-server",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Open Pixel Control parser",
   "main": "opcparse.js",
   "dependencies": {},
