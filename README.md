@@ -6,16 +6,15 @@ node-opc-server implements the Open Pixel Control protocol and drives ws281x RGB
 ## System overview
 
 ```
- PC or Rapsi running -> Network -> Raspi #18 -> 3.3V -> 5V -> NeoPixel
+ PC or Raspi running -> Network -> Raspi #18 -> 3.3V -> 5V -> NeoPixel
  grid8x8_dot.pde                                              8x8 array
 ```
 
-- Drives one WS2812 LED strip up to 1024 LEDs but only tested up to 64 LEDs.
+- Drives one WS2812 LED strip up to 1024 LEDs but only tested up to 128 LEDs.
 
-- Implements the Open Pixel Control protocol on TCP port 7890. This is the same
-  protocol used by Fadecandy server (fcserver).
+- Implements the Open Pixel Control protocol on TCP port 7890. This is the same protocol used by Fadecandy server (fcserver).
 
-This is not a Fadecandy controller hardware clone.
+This is not a Fadecandy controller hardware clone. Fadecandy has advanced features not implemented by this program.
 
 - No dithering.
 - No keyframe interpolation.
@@ -23,6 +22,18 @@ This is not a Fadecandy controller hardware clone.
 - SysEx ignored.
 
 ## Use it
+
+I recommend running Raspian Jessie.
+
+Install node 4.2.1 (as of March 8, 2016) from http://node-arm.herokuapp.com/.
+
+```
+wget http://node-arm.herokuapp.com/node_latest_armhf.deb
+sudo dpkg -i node_latest_armhf.deb
+node -v
+```
+
+Install this package.
 
 ```
 npm install node-opc-server
@@ -48,6 +59,10 @@ The Fadecandy grid8x8 Processing examples at https://github.com/scanlime/fadecan
 
     examples/processing/
         grid8x8_dot, grid8x8_noise_sample, grid8x8_orbits, grid8x8_wavefronts
+
+## Changes
+
+v1.0.4 Verified to work on a Raspberry Pi 2, Raspian Jessie, and nodejs 4.2.1 from http://node-arm.herokuapp.com/
 
 ## References
 
