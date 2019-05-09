@@ -2,7 +2,7 @@
 'use strict';
 
 var ws281x = require('rpi-ws281x-native');
-var NUM_LEDS = parseInt(process.argv[2], 100) || 100;
+var NUM_LEDS = parseInt(process.argv[2], 10) || 100;
 var pixelsUint32 = new Uint32Array(NUM_LEDS);
 ws281x.init(NUM_LEDS);
 var GAMMA_CORRECT = true;
